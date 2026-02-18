@@ -96,10 +96,10 @@ On preliminary 4xH100 setting, accelerated version achieves ~10 times speed-up w
 If you find this work helpful in your research, please cite:
 
 ```bibtex
-@misc{qiu2025evolutionstrategiesscalellm,
+@misc{qiu2026evolutionstrategiesscalellm,
       title={Evolution Strategies at Scale: LLM Fine-Tuning Beyond Reinforcement Learning}, 
-      author={Xin Qiu and Yulu Gan and Conor F. Hayes and Qiyao Liang and Elliot Meyerson and Babak Hodjat and Risto Miikkulainen},
-      year={2025},
+      author={Xin Qiu and Yulu Gan and Conor F. Hayes and Qiyao Liang and Yinggan Xu and Roberto Dailey and Elliot Meyerson and Babak Hodjat and Risto Miikkulainen},
+      year={2026},
       eprint={2509.24372},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
