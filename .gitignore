@@ -20,7 +20,13 @@ checkpoint*/
 finetuned*/
 ckpt*/
 logs_*/
-results_*/
+# Allow committing small training logs; ignore anything else under results_*
+results_es/*
+!results_es/training.log
+results_grpo/*
+!results_grpo/training.log
+results_zo/*
+!results_zo/training.log
 *.tfevents.*
 
 # Local / secrets

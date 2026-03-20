@@ -1,0 +1,137 @@
+Using CUDA
+Device: cuda
+Gradient method: central
+Loaded 2200 total countdown samples from /home/d3/es-fine-tuning-paper/countdown/data/countdown.json
+Training samples: 32
+Evaluation samples: 128
+Number of perturbations: 30, Iterations: 15
+Max new tokens: 256
+Mu (perturbation scale): 0.001, Learning rate: 0.0005
+Parallel threads: 8
+Loading model from Qwen/Qwen2.5-1.5B-Instruct...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 6465.11it/s]
+/home/d3/miniforge3/envs/es_cuda/lib/python3.12/site-packages/torch/cuda/__init__.py:1007: UserWarning: Can't initialize NVML
+  raw_cnt = _raw_device_count_nvml()
+/home/d3/miniforge3/envs/es_cuda/lib/python3.12/site-packages/torch/cuda/__init__.py:435: UserWarning: 
+    Found GPU0 NVIDIA GB10 which is of cuda capability 12.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (8.0) - (12.0)
+    
+  queued_call()
+Model loaded successfully
+Training: each iteration runs many forward passes; the first lines may take 10–20+ minutes.
+Starting iteration 1/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 1/15, Time: 2333.93s, Train Loss: -0.0737, Train Reward: 0.0737, Mean |dir_grad|: 8.708333, Std: 11.779145
+Starting iteration 2/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 2/15, Time: 2335.60s, Train Loss: -0.0850, Train Reward: 0.0850, Mean |dir_grad|: 9.833333, Std: 12.349019
+Starting iteration 3/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 3/15, Time: 2336.53s, Train Loss: -0.1138, Train Reward: 0.1138, Mean |dir_grad|: 7.125000, Std: 9.440880
+Starting iteration 4/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 4/15, Time: 2338.29s, Train Loss: -0.0688, Train Reward: 0.0688, Mean |dir_grad|: 8.229167, Std: 12.218159
+Starting iteration 5/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 5/15, Time: 2338.61s, Train Loss: -0.0963, Train Reward: 0.0963, Mean |dir_grad|: 1.562500, Std: 2.124694
+Starting iteration 6/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 6/15, Time: 2338.89s, Train Loss: -0.1288, Train Reward: 0.1288, Mean |dir_grad|: 4.104167, Std: 5.524920
+Starting iteration 7/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 7/15, Time: 2338.43s, Train Loss: -0.0663, Train Reward: 0.0663, Mean |dir_grad|: 6.145833, Std: 8.742085
+Starting iteration 8/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 8/15, Time: 2338.30s, Train Loss: -0.0950, Train Reward: 0.0950, Mean |dir_grad|: 0.875000, Std: 1.350154
+Starting iteration 9/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 9/15, Time: 2338.31s, Train Loss: -0.0925, Train Reward: 0.0925, Mean |dir_grad|: 6.354167, Std: 5.161666
+Starting iteration 10/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 10/15, Time: 2337.80s, Train Loss: -0.0925, Train Reward: 0.0925, Mean |dir_grad|: 6.333333, Std: 10.029038
+
+============================================================
+Evaluating model at iteration 10...
+Evaluation Results:
+  Loss: -0.0687
+  Reward: 0.0687
+  Accuracy (reward > 0.9): 0.78%
+============================================================
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.39s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.39s/it]
+Checkpoint saved to checkpoint_zo_iter_10
+Starting iteration 11/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 11/15, Time: 2337.66s, Train Loss: -0.0612, Train Reward: 0.0612, Mean |dir_grad|: 4.479167, Std: 6.642044
+Starting iteration 12/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 12/15, Time: 2337.50s, Train Loss: -0.0612, Train Reward: 0.0612, Mean |dir_grad|: 2.979167, Std: 5.260613
+Starting iteration 13/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 13/15, Time: 2337.52s, Train Loss: -0.0600, Train Reward: 0.0600, Mean |dir_grad|: 10.770833, Std: 7.852951
+Starting iteration 14/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 14/15, Time: 2336.87s, Train Loss: -0.0638, Train Reward: 0.0638, Mean |dir_grad|: 5.708333, Std: 8.496936
+Starting iteration 15/15 (perturbations)...
+  Perturbation batch done: 0–7 / 29
+  Perturbation batch done: 8–15 / 29
+  Perturbation batch done: 16–23 / 29
+  Perturbation batch done: 24–29 / 29
+Iteration 15/15, Time: 2335.55s, Train Loss: -0.0750, Train Reward: 0.0750, Mean |dir_grad|: 5.916667, Std: 7.965420
+
+============================================================
+Final Evaluation:
+============================================================
+Final Results:
+  Loss: -0.0878
+  Reward: 0.0878
+  Accuracy (reward > 0.9): 1.56%
+============================================================
+
+Training completed in 35698.96s (594.98 minutes)
+Saving final model to finetuned_zo_pert30_iter15_central_final...
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.47s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.47s/it]
+Final model saved successfully to finetuned_zo_pert30_iter15_central_final

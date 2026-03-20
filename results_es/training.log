@@ -1,0 +1,71 @@
+Using CUDA
+Device: cuda
+Loaded 2200 total countdown samples from /home/d3/es-fine-tuning-paper/countdown/data/countdown.json
+Training samples: 32
+Evaluation samples: 128
+Population size: 30, Iterations: 15
+Sigma: 0.001, Alpha: 0.0005
+Max new tokens: 256
+Parallel threads: 8
+Evaluation every: 10 iterations
+Loading model from Qwen/Qwen2.5-1.5B-Instruct...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 12590.03it/s]
+/home/d3/miniforge3/envs/es_cuda/lib/python3.12/site-packages/torch/cuda/__init__.py:1007: UserWarning: Can't initialize NVML
+  raw_cnt = _raw_device_count_nvml()
+/home/d3/miniforge3/envs/es_cuda/lib/python3.12/site-packages/torch/cuda/__init__.py:435: UserWarning: 
+    Found GPU0 NVIDIA GB10 which is of cuda capability 12.1.
+    Minimum and Maximum cuda capability supported by this version of PyTorch is
+    (8.0) - (12.0)
+    
+  queued_call()
+Creating 8 model copies for parallel processing...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 10421.40it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 11912.03it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 6856.89it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 8846.37it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 6940.47it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 6348.26it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 11941.43it/s]
+Created 8 model copies (using ~28.0 GB GPU memory)
+Model loaded successfully
+Iteration 1/15, Time: 1183.59s, Mean: 0.0663, Min: 0.0600, Max: 0.1225
+Iteration 2/15, Time: 1184.24s, Mean: 0.0654, Min: 0.0600, Max: 0.0913
+Iteration 3/15, Time: 1184.35s, Mean: 0.0716, Min: 0.0600, Max: 0.1238
+Iteration 4/15, Time: 1184.28s, Mean: 0.0674, Min: 0.0600, Max: 0.1225
+Iteration 5/15, Time: 1184.47s, Mean: 0.0673, Min: 0.0600, Max: 0.1225
+Iteration 6/15, Time: 1184.56s, Mean: 0.0694, Min: 0.0600, Max: 0.1225
+Iteration 7/15, Time: 1184.05s, Mean: 0.0705, Min: 0.0600, Max: 0.1225
+Iteration 8/15, Time: 1184.07s, Mean: 0.0664, Min: 0.0600, Max: 0.1238
+Iteration 9/15, Time: 1184.58s, Mean: 0.0705, Min: 0.0600, Max: 0.1225
+Iteration 10/15, Time: 1184.11s, Mean: 0.0705, Min: 0.0600, Max: 0.1225
+
+============================================================
+Evaluating model at iteration 10...
+Evaluation Results:
+  Loss: -0.0681
+  Reward: 0.0681
+  Accuracy (reward > 0.9): 0.78%
+============================================================
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.17s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.17s/it]
+Checkpoint saved to checkpoint_iter_10
+Iteration 11/15, Time: 1184.46s, Mean: 0.0623, Min: 0.0600, Max: 0.0913
+Iteration 12/15, Time: 1184.94s, Mean: 0.0685, Min: 0.0600, Max: 0.1225
+Iteration 13/15, Time: 1184.59s, Mean: 0.0736, Min: 0.0600, Max: 0.1225
+Iteration 14/15, Time: 1184.56s, Mean: 0.0685, Min: 0.0600, Max: 0.0925
+Iteration 15/15, Time: 1184.64s, Mean: 0.0683, Min: 0.0600, Max: 0.1225
+
+============================================================
+Final Evaluation:
+============================================================
+Final Results:
+  Loss: -0.0678
+  Reward: 0.0678
+  Accuracy (reward > 0.9): 0.78%
+============================================================
+
+
+Training completed in 17826.90s (297.12 minutes)
+Saving final model to finetuned_es_pop30_iter15_final...
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.21s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.21s/it]
+Final model saved successfully to finetuned_es_pop30_iter15_final
